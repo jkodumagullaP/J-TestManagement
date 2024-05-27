@@ -1,0 +1,33 @@
+﻿The Crystal Test website is published to the folder that IIS points the website to. The following describes the current settings for publishing to each environment.
+
+Local:
+    Publish Method: File System
+    Location: C:\Crystal Test\CT Website\Local
+    Configuration: Local - x86
+    File Publish Options:
+        Delete all existing files prior to publish
+        Exlude files from the App_Data folder
+    
+Stage:
+    Publish Method: File System
+    Location: C:\Crystal Test\CT Website\Stage
+    Configuration: Local - x86
+    File Publish Options:
+        Delete all existing files prior to publish
+        Exlude files from the App_Data folder
+    
+    
+Production:
+    Publish Method: File System
+    Location: C:\Crystal Test\CT Website\Production
+    Configuration: Local - x86
+    File Publish Options:
+        Delete all existing files prior to publish
+        Exlude files from the App_Data folder
+
+The web.config file contains Config Transforms for each environment. Any configurations that will change among environments should be configured in these transform files. These changes will update the web.config automatically with each build. 
+    web.Local.config
+    web.STAGE.config
+    web.PRODUCTION.config
+
+The local environment does not have changes since the default web.config is already configured with options for local, however, the web.local.config file can not be deleted.

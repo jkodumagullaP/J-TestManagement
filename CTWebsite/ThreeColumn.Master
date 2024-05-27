@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ThreeColumn.Master.cs" Inherits="CTWebsite.ThreeColumn" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <div id="header">
+            <%--********** Title **********--%>
+            <table id="SiteHeader">
+                <tr>
+                    <td class="logocontainer">
+                        <asp:Image ID="logo" runat="server" ImageUrl="~/Images/ctlogo.png" Height="150px" Width="268px" AlternateText="Crystal Test" Visible="true" />
+                    </td>
+                </tr>
+                <tr>
+                    <td id="LoginView" class="loginDisplay" >
+                        <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+
+                            <AnonymousTemplate>
+                                [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a> ]
+                                [<asp:HyperLink ID="RegisterHyperlink" runat="server" NavigateUrl="~/Account/Register.aspx">Register </asp:HyperLink>]
+                            </AnonymousTemplate>
+
+                            <LoggedInTemplate>
+                                Welcome <a href="~/Account/Profile.aspx" id="A1" runat="server"><span class="bold">
+                                    <asp:Label ID="HeadLoginFullName" runat="server" Text=""></asp:Label></span></a>
+                                (<asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/" />
+                                )
+                            </LoggedInTemplate>
+
+                        </asp:LoginView>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="nav-main">
+            <%--********** Menu **********--%>
+            <ul id="navigation" class="nav-main">
+                <li><a href="../Default.aspx">Dashboard</a></li>
+                <li><a href="../FunctionalTesting/TestCases.aspx">Manual Test Cases</a></li>
+                                <li><a href="../NewTest.aspx">Autamtion Test Cases</a></li>
+
+                <li class="list" id="AdminButton" runat="server"><a href="#">Admin</a>
+                    <ul class="nav-sub">
+                        <li><a href="../Admin/AdminProjects.aspx">Admin Projects</a></li>
+                        <li><a href="../Admin/AdminReleases.aspx">Admin Releases</a></li>
+                        <li><a href="../Admin/AdminSprints.aspx">Admin Sprints</a></li>
+                        <li><a href="../Admin/AdminGroups.aspx">Admin Groups</a></li>
+                        <li><a href="../Admin/AdminTestCases.aspx">Admin Test Cases</a></li>
+                        <li><a href="../Admin/AdminBrowsers.aspx">Admin Browsers</a></li>
+                        <li><a href="../Admin/AdminEnvironments.aspx">Admin Environments</a></li>
+                    </ul>
+                </li>
+                    <ul class="nav-sub">
+                        <li>
+                            <asp:DynamicHyperLink ID="ctDocumentationURL" href="" runat="server" target="_blank">
+                                <asp:Label ID="ctDocumentationURLText" runat="server" Text="Crystal Test Wiki" ></asp:Label>
+                            </asp:DynamicHyperLink>
+                        </li>
+                        <li>
+                            <asp:DynamicHyperLink ID="ctCreateBug" href="" runat="server" target="_blank">
+                                <asp:Label ID="ctCreateBugText" runat="server" Text="Report a Crystal Test Bug"></asp:Label>
+                            </asp:DynamicHyperLink>
+                        </li>
+                        <li>
+                            <asp:DynamicHyperLink ID="ctContact" href="" runat="server" target="_blank">
+                                <asp:Label ID="ctContactText" runat="server" Text="Contact Us"></asp:Label>
+                            </asp:DynamicHyperLink>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="container">
+            <%--****** Main Content ******--%>
+            <div id="center" class="column">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+
+            <%--****** Left Column Content ******--%>
+            <div id="left" class="column">
+                <asp:ContentPlaceHolder ID="LeftColumnContent" runat="server" />
+            </div>
+
+            <%--****** Right Content ******--%>
+            <div id="right" class="column">
+                <asp:ContentPlaceHolder ID="RightColumnContent" runat="server" />
+            </div>
+        </div>
+        <%--********* Footer *********--%>
+        <div id="footer-wrapper">
+            <div id="footer">
+                <div>
+                </div>
+                <div id="PoweredBy" class="PoweredBy">
+                    
+                </div>
+                
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
+

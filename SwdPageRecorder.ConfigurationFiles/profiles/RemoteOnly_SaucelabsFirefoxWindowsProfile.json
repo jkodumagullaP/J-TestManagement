@@ -1,0 +1,21 @@
+﻿{
+  "profile": {
+    "profileId": "SaucelabsFirefoxWindowsProfile",
+    "displayName": "Saucelabs Firefox (Windows)",
+    "displayPriority": 20,
+    "canUseWithLocalWebdriver": false,
+    "canUseWithIWebDriver": true
+  },
+  "activation": {
+    "browserName": "Firefox"
+  },
+  "capabilities": {
+    "IWebDriver": [
+      // [ "capName", "capValue" ],
+      [ "username", "YoName" ],
+      [ "accessKey", "65c6c894-666-443a-bfee-2d70cb1a6603" ],
+      [ "platform", "Windows" ]
+
+    ]
+  }
+}

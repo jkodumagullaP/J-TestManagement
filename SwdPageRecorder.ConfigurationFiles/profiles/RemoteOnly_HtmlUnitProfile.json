@@ -1,0 +1,18 @@
+﻿{
+  "profile": {
+    "profileId": "HtmlUnit",
+    "displayName": "HtmlUnit",
+    "displayPriority": 10,
+    "canUseWithLocalWebdriver": false,
+    "canUseWithIWebDriver": true
+  },
+  "activation": {
+    "browserName": "HtmlUnit"
+  },
+  "capabilities": {
+    "IWebDriver": [
+      // [ "capName", "capValue" ]
+
+    ]
+  }
+}

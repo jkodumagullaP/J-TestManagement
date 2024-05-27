@@ -1,0 +1,14 @@
+﻿Do not 'Publish' the AutomationTestEngine. Instead, 'Build' it.
+
+Depending on the environment the code is built in, the code needed to run the AutomationTestEngine is put in one of the following directories:
+    C:\Crystal Test\CT AutomationTestEngine\Local
+    C:\Crystal Test\CT AutomationTestEngine\Stage
+    C:\Crystal Test\CT AutomationTestEngine\Production
+
+The app.config file contains Config Transforms for each environment. Any configurations that will change among environments should be configured in these transform files. These changes will update the app.config automatically with each build.
+    app.Local.config
+    app.Stage.config
+    app.Production.config
+
+The local environment does not have changes since the default app.config is already configured with options for local, however, the app.local.config file can not be deleted.
+

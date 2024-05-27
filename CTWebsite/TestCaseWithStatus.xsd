@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TestCaseWithStatus" targetNamespace="http://tempuri.org/TestCaseWithStatus.xsd" xmlns:mstns="http://tempuri.org/TestCaseWithStatus.xsd" xmlns="http://tempuri.org/TestCaseWithStatus.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="QAAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QAAConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.QAAConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TestCaseWithStatusTableAdapter" GeneratorDataComponentClassName="TestCaseWithStatusTableAdapter" Name="TestCaseWithStatus" UserDataComponentName="TestCaseWithStatusTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QAAConnectionString (Web.config)" DbObjectName="CTLocalTB.dbo.TestCaseWithStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT projectAbbreviation, testCaseId, testCaseDescription, active, testCaseOutdated, testScriptOutdated, testCaseSteps, expectedResults, testCaseNotes, dateLastUpdated, updatedBy, autoTestClass, autoMetaDataTable, autoMetaDataRow, environment, testDate, status, lastTestedBy, rawTestCaseDescription, rawActive, rawTestCaseOutdated, rawTestScriptOutdated, rawTestCaseSteps, rawExpectedResults, rawTestCaseNotes, AverageSeconds FROM dbo.TestCaseWithStatus</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="projectAbbreviation" DataSetColumn="projectAbbreviation" />
+              <Mapping SourceColumn="testCaseId" DataSetColumn="testCaseId" />
+              <Mapping SourceColumn="testCaseDescription" DataSetColumn="testCaseDescription" />
+              <Mapping SourceColumn="active" DataSetColumn="active" />
+              <Mapping SourceColumn="testCaseOutdated" DataSetColumn="testCaseOutdated" />
+              <Mapping SourceColumn="testScriptOutdated" DataSetColumn="testScriptOutdated" />
+              <Mapping SourceColumn="testCaseSteps" DataSetColumn="testCaseSteps" />
+              <Mapping SourceColumn="expectedResults" DataSetColumn="expectedResults" />
+              <Mapping SourceColumn="testCaseNotes" DataSetColumn="testCaseNotes" />
+              <Mapping SourceColumn="dateLastUpdated" DataSetColumn="dateLastUpdated" />
+              <Mapping SourceColumn="updatedBy" DataSetColumn="updatedBy" />
+              <Mapping SourceColumn="autoTestClass" DataSetColumn="autoTestClass" />
+              <Mapping SourceColumn="autoMetaDataTable" DataSetColumn="autoMetaDataTable" />
+              <Mapping SourceColumn="autoMetaDataRow" DataSetColumn="autoMetaDataRow" />
+              <Mapping SourceColumn="environment" DataSetColumn="environment" />
+              <Mapping SourceColumn="testDate" DataSetColumn="testDate" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="lastTestedBy" DataSetColumn="lastTestedBy" />
+              <Mapping SourceColumn="rawTestCaseDescription" DataSetColumn="rawTestCaseDescription" />
+              <Mapping SourceColumn="rawActive" DataSetColumn="rawActive" />
+              <Mapping SourceColumn="rawTestCaseOutdated" DataSetColumn="rawTestCaseOutdated" />
+              <Mapping SourceColumn="rawTestScriptOutdated" DataSetColumn="rawTestScriptOutdated" />
+              <Mapping SourceColumn="rawTestCaseSteps" DataSetColumn="rawTestCaseSteps" />
+              <Mapping SourceColumn="rawExpectedResults" DataSetColumn="rawExpectedResults" />
+              <Mapping SourceColumn="rawTestCaseNotes" DataSetColumn="rawTestCaseNotes" />
+              <Mapping SourceColumn="AverageSeconds" DataSetColumn="AverageSeconds" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TestCaseWithStatus" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TestCaseWithStatus" msprop:Generator_UserDSName="TestCaseWithStatus">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TestCaseWithStatus" msprop:Generator_TableClassName="TestCaseWithStatusDataTable" msprop:Generator_TableVarName="tableTestCaseWithStatus" msprop:Generator_TablePropName="_TestCaseWithStatus" msprop:Generator_RowDeletingName="TestCaseWithStatusRowDeleting" msprop:Generator_UserTableName="TestCaseWithStatus" msprop:Generator_RowChangingName="TestCaseWithStatusRowChanging" msprop:Generator_RowEvHandlerName="TestCaseWithStatusRowChangeEventHandler" msprop:Generator_RowDeletedName="TestCaseWithStatusRowDeleted" msprop:Generator_RowEvArgName="TestCaseWithStatusRowChangeEvent" msprop:Generator_RowChangedName="TestCaseWithStatusRowChanged" msprop:Generator_RowClassName="TestCaseWithStatusRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="projectAbbreviation" msprop:Generator_ColumnVarNameInTable="columnprojectAbbreviation" msprop:Generator_ColumnPropNameInRow="projectAbbreviation" msprop:Generator_ColumnPropNameInTable="projectAbbreviationColumn" msprop:Generator_UserColumnName="projectAbbreviation">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="testCaseId" msprop:Generator_ColumnVarNameInTable="columntestCaseId" msprop:Generator_ColumnPropNameInRow="testCaseId" msprop:Generator_ColumnPropNameInTable="testCaseIdColumn" msprop:Generator_UserColumnName="testCaseId" type="xs:int" />
+              <xs:element name="testCaseDescription" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntestCaseDescription" msprop:Generator_ColumnPropNameInRow="testCaseDescription" msprop:Generator_ColumnPropNameInTable="testCaseDescriptionColumn" msprop:Generator_UserColumnName="testCaseDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="testCaseSteps" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntestCaseSteps" msprop:Generator_ColumnPropNameInRow="testCaseSteps" msprop:Generator_ColumnPropNameInTable="testCaseStepsColumn" msprop:Generator_UserColumnName="testCaseSteps" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="expectedResults" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnexpectedResults" msprop:Generator_ColumnPropNameInRow="expectedResults" msprop:Generator_ColumnPropNameInTable="expectedResultsColumn" msprop:Generator_UserColumnName="expectedResults" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="testCaseNotes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntestCaseNotes" msprop:Generator_ColumnPropNameInRow="testCaseNotes" msprop:Generator_ColumnPropNameInTable="testCaseNotesColumn" msprop:Generator_UserColumnName="testCaseNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dateLastUpdated" msprop:Generator_ColumnVarNameInTable="columndateLastUpdated" msprop:Generator_ColumnPropNameInRow="dateLastUpdated" msprop:Generator_ColumnPropNameInTable="dateLastUpdatedColumn" msprop:Generator_UserColumnName="dateLastUpdated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="updatedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnupdatedBy" msprop:Generator_ColumnPropNameInRow="updatedBy" msprop:Generator_ColumnPropNameInTable="updatedByColumn" msprop:Generator_UserColumnName="updatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="201" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="autoTestClass" msprop:Generator_ColumnVarNameInTable="columnautoTestClass" msprop:Generator_ColumnPropNameInRow="autoTestClass" msprop:Generator_ColumnPropNameInTable="autoTestClassColumn" msprop:Generator_UserColumnName="autoTestClass" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+                <xs:element name="autoMetaDataTable" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnautoMetaDataTable" msprop:Generator_ColumnPropNameInRow="autoMetaDataTable" msprop:Generator_ColumnPropNameInTable="autoMetaDataTableColumn" msprop:Generator_UserColumnName="autoMetaDataTable" minOccurs="0">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="autoMetaDataRow" msprop:Generator_ColumnVarNameInTable="columnautoMetaDataRow" msprop:Generator_ColumnPropNameInRow="autoMetaDataRow" msprop:Generator_ColumnPropNameInTable="autoMetaDataRowColumn" msprop:Generator_UserColumnName="autoMetaDataRow" type="xs:int" minOccurs="0" />
+              <xs:element name="environment" msprop:Generator_ColumnVarNameInTable="columnenvironment" msprop:Generator_ColumnPropNameInRow="environment" msprop:Generator_ColumnPropNameInTable="environmentColumn" msprop:Generator_UserColumnName="environment">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="testDate" msprop:Generator_ColumnVarNameInTable="columntestDate" msprop:Generator_ColumnPropNameInRow="testDate" msprop:Generator_ColumnPropNameInTable="testDateColumn" msprop:Generator_UserColumnName="testDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="status" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lastTestedBy" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnlastTestedBy" msprop:Generator_ColumnPropNameInRow="lastTestedBy" msprop:Generator_ColumnPropNameInTable="lastTestedByColumn" msprop:Generator_UserColumnName="lastTestedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="201" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rawTestCaseDescription" msprop:Generator_ColumnVarNameInTable="columnrawTestCaseDescription" msprop:Generator_ColumnPropNameInRow="rawTestCaseDescription" msprop:Generator_ColumnPropNameInTable="rawTestCaseDescriptionColumn" msprop:Generator_UserColumnName="rawTestCaseDescription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rawActive" msprop:Generator_ColumnVarNameInTable="columnrawActive" msprop:Generator_ColumnPropNameInRow="rawActive" msprop:Generator_ColumnPropNameInTable="rawActiveColumn" msprop:Generator_UserColumnName="rawActive">
+                <xs:simpleType>
+                  <xs:restriction base="xs:boolean">
+                    <xs:pattern value="true"/>
+                    <xs:pattern value="false"/>
+                  </xs:restriction>
+                </xs:simpleType>              
+              </xs:element>
+              <xs:element name="rawTestCaseOutdated" msprop:Generator_ColumnVarNameInTable="columnrawTestCaseOutdated" msprop:Generator_ColumnPropNameInRow="rawTestCaseOutdated" msprop:Generator_ColumnPropNameInTable="rawTestCaseOutdatedColumn" msprop:Generator_UserColumnName="rawTestCaseOutdated">
+                <xs:simpleType>
+                  <xs:restriction base="xs:boolean">
+                    <xs:pattern value="true"/>
+                    <xs:pattern value="false"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rawTestScriptOutdated" msprop:Generator_ColumnVarNameInTable="columnrawTestScriptOutdated" msprop:Generator_ColumnPropNameInRow="rawTestScriptOutdated" msprop:Generator_ColumnPropNameInTable="rawTestScriptOutdatedColumn" msprop:Generator_UserColumnName="rawTestScriptOutdated">
+                <xs:simpleType>
+                  <xs:restriction base="xs:boolean">
+                    <xs:pattern value="true"/>
+                    <xs:pattern value="false"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rawTestCaseSteps" msprop:Generator_ColumnVarNameInTable="columnrawTestCaseSteps" msprop:Generator_ColumnPropNameInRow="rawTestCaseSteps" msprop:Generator_ColumnPropNameInTable="rawTestCaseStepsColumn" msprop:Generator_UserColumnName="rawTestCaseSteps">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rawExpectedResults" msprop:Generator_ColumnVarNameInTable="columnrawExpectedResults" msprop:Generator_ColumnPropNameInRow="rawExpectedResults" msprop:Generator_ColumnPropNameInTable="rawExpectedResultsColumn" msprop:Generator_UserColumnName="rawExpectedResults">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rawTestCaseNotes" msprop:Generator_ColumnVarNameInTable="columnrawTestCaseNotes" msprop:Generator_ColumnPropNameInRow="rawTestCaseNotes" msprop:Generator_ColumnPropNameInTable="rawTestCaseNotesColumn" msprop:Generator_UserColumnName="rawTestCaseNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AverageSeconds" msprop:Generator_ColumnVarNameInTable="columnAverageSeconds" msprop:Generator_ColumnPropNameInRow="AverageSeconds" msprop:Generator_ColumnPropNameInTable="AverageSecondsColumn" msprop:Generator_UserColumnName="AverageSeconds" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TestCaseWithStatus" />
+      <xs:field xpath="mstns:projectAbbreviation" />
+      <xs:field xpath="mstns:testCaseId" />
+      <xs:field xpath="mstns:environment" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

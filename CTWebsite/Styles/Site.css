@@ -1,0 +1,550 @@
+﻿/*
+Logo Colors
+
+#5D7FC0 - Dark Purple/Blue (RGB: 93,127,192)
+#649ACF - Mid (RGB: 100,154,207)
+#73CFED - Light Blue/Green (RGB: 115,207,237)
+#D5E1F0 - Pale Blue (RGB: 213,225,240)
+
+Text Color
+#404040 - Dark Grey (RGB: 64,64,64)
+*/
+
+/************* DEFAULT 3 COLUMN LAYOUT WITH HEADER AND FOOTER (DO NOT CHANGE) *************/
+/* LC = Left Column     */
+/* RC = Right COlumn    */
+/* CC = Center Column   */
+
+/***********************
+   DEFAULT PAGE LAYOUT 
+************************/
+body { min-width: 830px; /* 2x(LC fullwidth + CC padding) +  RC fullwidth */ background: #404040; }
+#container { padding-left: 250px; /* LC fullwidth */ padding-right: 290px; /* RC fullwidth + CC padding */ overflow: hidden; }
+#container .column { position: relative; float: left; padding-bottom: 20010px; /* X + padding-bottom */ margin-bottom: -20000px; }
+#header { position: relative; margin: 0px; /*was  0 */ padding: 0px; /*was  0 */ border: 1px solid #000000; border-radius: 10px; }
+#left { width: 230px; /* LC width */ padding: 0 10px; /* LC padding */ right: 290px; /* LC fullwidth + CC padding */ margin-left: -100%; background-color: #FFFFFF; }
+#center { padding: 10px 20px; /* CC padding = 40 (20 X 2 to account for both sides) */ width: 100%; background-color: #FFFFFF; background-repeat: repeat-y; }
+#right { width: 230px; /* RC width */ padding: 0 10px; /* RC padding */ margin-right: -290px; /* RC fullwidth + CC padding */ background-color: #FFFFFF; }
+#footer { clear: both; position: relative; background: #404040 url('../Images/bluebg5.png') repeat-x center; padding: 10px 20px 10px 20px; text-align: center; border: 1px solid #000000; border-radius: 10px; }
+.clear { clear: both; }
+
+/*** IE Fix ***/
+* html body { overflow: hidden; }
+* html #left { left: 250px; /* RC fullwidth */ }
+* html #footer-wrapper { float: left; position: relative; width: 100%; padding-bottom: 10010px; margin-bottom: -10000px; background: #fff; }
+
+/*************** DO NOT CHANGE ANYTHING ABOVE THIS LINE *******************/
+
+/***********************
+     DEFAULT TEXT
+************************/
+body { font-size: 10pt; font-family: Verdana, Geneva, Tahoma, sans-serif; color: #404040; }
+h1, h2, h3, h4, h5, h6 { font-size: 1.5em; color: #404040; font-variant: small-caps; text-transform: none; font-weight: 200; margin-bottom: 0px; }
+h1 { font-size: 1.6em; padding-bottom: 0px; margin-bottom: 0px; /*text-align:center;*/ }
+h2 { font-size: 1.5em; font-weight: 600; }
+h3 { font-size: 1.2em; }
+h4 { font-size: 1.1em; }
+h5, h6 { font-size: 1em; }
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2 { margin-top: 0px; }
+
+/***********************
+        HEADER
+************************/
+#SiteHeader { margin:0; background-position: right top; width: 100%; padding-top: 10px; background-color: #FFFFFF; background-image: url('../Images/masthead.png'); background-repeat: no-repeat;padding-left:0; padding-right:0; }
+#SiteHeader .logocontainer {float: left; padding-left: 10px; vertical-align:middle;}
+#SiteHeader .companyName {font-variant: small-caps; font-size: 36px; font-family: Garamond; color: #5D7FC0; font-weight: bold; text-shadow: 2px 2px #717171;}
+#SiteHeader .loginDisplay { float: left; font-size: 12px; display: block; text-align: left; padding-left: 10px; color: #000000; }
+#SiteHeader .loginDisplay a:link { color: #5D7FC0 ; font-weight: bold; text-decoration: none; }
+#SiteHeader .loginDisplay a:visited { color: #5D7FC0 ; font-weight: bold; text-decoration: none; }
+#SiteHeader .loginDisplay a:hover { color: #5D7FC0 ; font-weight: bold; text-decoration: none; }
+
+/***********************
+        FOOTER
+************************/
+.bold { font-weight: bold; }
+.submitButton { text-align: right; padding-right: 10px; }
+/*
+    DO NOT REMOVE OR CHANGE!
+    The Powered By text and link MUST remain intact 
+    and unchanged in all distributions of Crystal Test or products derived from Crystal Test.
+*/
+#PoweredBy, #PoweredBy a:link, #PoweredBy a:visited, #PoweredBy a:hover, #PoweredBy a:active, #PoweredBy a:focus { font-size: 12px; color: #000000; }
+#AppInfo { color: #000000; font-family: Arial, Helvetica, sans-serif; }
+
+/**********************
+      MAIN MENU 
+**********************/
+
+#navigation { margin: 0; padding: 0; clear: both; width: 100%; height: 51px; background: #313131 url(../Images/dropdown-bg.gif) repeat-x left top; }
+ul.nav-main,
+ul.nav-main li { list-style: none; margin: 0; padding: 0; }
+ul.nav-main { position: relative; z-index: 597; }
+ul.nav-main li:hover > ul { visibility: visible; }
+ul.nav-main li.hover,
+ul.nav-main li:hover { position: relative; z-index: 599; cursor: pointer; background: url(../Images/dropdown-bg-hover.gif) repeat-x left top; }
+ul.nav-main li { float: left; display: block; height: 51px; color: #999; font: 14px Arial, Helvetica, sans-serif; background: url(../Images/separator.gif) no-repeat right center; }
+ul.nav-main li a { display: block; padding: 16px 16px 0 16px; height: 35px; color: #FFFFFF; font: 14px Arial, Helvetica, sans-serif; text-decoration: none; }
+ul.nav-main li a:hover { color: #73CFED;}
+ul.nav-main *.list { padding-right: 22px; background: url(../Images/navigation-arrow.gif) no-repeat right top; }
+ul.nav-sub { visibility: hidden; position: absolute; padding: 10px; top: 48px; left: 0; z-index: 598; background: #353535 url(../Images/dropdown-list-bg.gif) repeat-x left top; border-right: 1px solid #000; border-bottom: 1px solid #000; border-left: 1px solid #000; }
+ul.nav-sub li { list-style: none; display: block; padding: 0; height: 27px; float: none; width: 145px; border-bottom: 1px solid #5a5a5a; background: none; }
+ul.nav-sub li a { list-style: none; display: block; padding: 6px 5px 6px 5px; height: 15px; float: none; width: 145px; background: none; font: 12px Arial, Helvetica, sans-serif; }
+
+/**********************
+     LEFT COLUMN 
+**********************/
+/* Boxes*/
+.box { border: 2px solid #5D7FC0; border-radius: 10px; background-color: #D5E1F0; margin-top: 10px; margin-bottom: 10px; }
+.box div.boxHeaderContainer { background: #5D7FC0; height: 35px; border-top-left-radius: 5px; border-top-right-radius: 5px; background-image: url('../Images/PaginationBG.png'); background-repeat: repeat-x; }
+.box div.left { float: left; text-shadow: 2px 2px #717171; font-family: "trebuchet ms" ,verdana,arial,sans-serif; color: #ffffff; font-size: 16px; position: relative; vertical-align: middle; text-align: left; padding-left: 10px; }
+.box div.right {color:white; float:right;}
+.box p {color:#333;padding:10px;}
+
+/*Test Cases Page*/
+.boxTestCases { border: 2px solid #5D7FC0; border-radius: 10px; background-color: #D5E1F0; margin-top: 10px; margin-bottom: 10px; }
+.boxTestCases div.boxTestCasesHeaderContainer { background: #5D7FC0; height: 20px; border-top-left-radius: 5px; border-top-right-radius: 5px; background-image: url('../Images/PaginationBG.png'); background-repeat: repeat-x; }
+.boxTestCases div.left { float: left; text-shadow: 2px 2px #717171; font-family: "trebuchet ms" ,verdana,arial,sans-serif; color: #ffffff; font-size: 14px; position: relative; vertical-align: middle; text-align: left; padding-left: 10px; }
+.boxTestCases p { color: #333; padding: 3px 10px 3px 10px; margin:2px 0 2px 0;}
+div.message {font-size:10px; padding:2px; }
+tblDateRange { color: #333; padding: 3px 10px 3px 10px; margin:2px 0 2px 0;}
+
+/*Accordian*/
+.accordionHeader { border: 1px solid #404040; color: white; font-family: Arial, Sans-Serif; font-size: 12px; font-weight: bold; padding: 5px; margin-top: 5px; cursor: pointer; background-image: url('../Images/dropdown-bg.gif'); }
+.accordionHeaderSelected { border-top-left-radius: 5px; border-top-right-radius: 5px; border: 1px solid #5D7FC0; text-shadow: 2px 2px #717171; font-family: "trebuchet ms" ,verdana,arial,sans-serif; color: #ffffff; font-size: 14px; padding: 5px; margin-top: 5px; cursor: pointer; background-color: #5D7FC0; background-image: url('../Images/PaginationBG.png'); background-repeat: repeat-x; }
+.accordionContent { background-color: #D5E1F0; border-top: none; padding: 5px; padding-top: 10px; border-style: solid; border-width: 1px; border-top-color: inherit; border-right-color: #5D7FC0; border-bottom-color: #5D7FC0; border-left-color: #5D7FC0; }
+
+#left div.title { padding: 2px 1px; color: #404040; font-size: 10px; width: 100%; text-align: center; margin: 5px 0px 0px 0px; text-align: left; }
+.leftRailDropdown { width: 200px; }
+.leftRailTextbox { width: 168px; }
+
+/**********************
+     CENTER COLUMN 
+**********************/
+
+
+/*Admin Page*/
+.adminSectionHeader {padding-bottom:20px; width:500px; }
+
+/*  Add New Test Case Page*/
+.watermarked { font-size: 24px; color: #CCCCCC; font-family: Arial, Helvetica, sans-serif; border: 2px solid #5D7FC0; border-radius: 10px; width: 85%; padding: 5px; vertical-align: middle; }
+#detailsInfo1 { width: 100%; background-color: #D5E1F0; font-family: Arial, Helvetica, sans-serif; }
+#detailsInfo1 .detailsInfo-title { text-align: center; font-size: 12px; color: #284977; }
+#detailsInfo1 .detailsInfo-element { text-align: center; font-size: 10px; }
+
+/* Add New Modal*/
+#PopupHeader1.PopupHeader, #PopupHeader2.PopupHeader, #PopupHeader3.PopupHeader { background-color: #5D7FC0; text-shadow: 2px 2px #717171; font-family: "trebuchet ms" ,verdana,arial,sans-serif; color: #ffffff; font-size: 14px; position: relative; padding-left: 10px; border-top-left-radius: 5px; border-top-right-radius: 5px; min-height: 25px; vertical-align: middle; background-image: url('../Images/PaginationBG.png'); background-repeat: repeat-x; }
+.AddNewModal { border: 2px solid #5D7FC0; border-radius:10px; min-width:375px; min-height:180px; background:white;}
+.thAddNewModalHeaderRow { background-color: #D5E1F0; text-align: left; text-indent: 10px; width:100%; }
+.tcAddNewModalFormRow { text-align: center; }
+.tcAddNewModalFormButtons { text-align: center; padding-top: 10px; }
+/* The page behind the popup modal */
+.ModalPopupBG { background-color: #5D7FC0; filter: alpha(opacity=50); opacity: 0.7;}
+
+
+/* Details Page - Details Tab*/
+#detailsHeader { width: 100%; background-color: #5D7FC0; font-family: Arial, Helvetica, sans-serif; background-image: url('../Images/PaginationBG.png'); background-repeat: repeat-x; }
+#detailsHeader td { font-size: 14px; font-weight: bold; color: #FFFFFF; /*color: #284977;*/ vertical-align: middle; font-variant: small-caps; }
+#detailsHeader .details-tcid { width: 10%; font-size: 24px; }
+#detailsHeader .details-title { width: 60%; float: left; }
+#detailscommands { width: 100%; font-family: Arial, Helvetica, sans-serif; }
+div.Right { float: right; }
+#detailsInfo { width: 100%; background-color: #D5E1F0; font-family: Arial, Helvetica, sans-serif; }
+#detailsInfo .detailsInfo-title { text-align: center; font-size: 12px; color: #404040; }
+#detailsInfo .detailsInfo-element { text-align: center; font-size: 10px; }
+#detailsInfo2 { width: 100%; }
+#detailsInfo2 .details-info-titles { padding: 3px 10px 3px 10px; font-weight: bold; width: 100%; background-color: #D5E1F0; color: #404040; font-variant: small-caps; }
+div .details-info-titles { padding: 3px 10px 3px 10px; font-weight: bold; width: 200px; background-color: #D5E1F0; color: #404040; font-variant: small-caps; }
+
+#detailsInfo2 .details-info-elements { padding: 10px; }
+#detailsHeader td { font-size: 14px; font-weight: bold; color: #FFFFFF; /*color: #284977;*/ vertical-align: middle; font-variant: small-caps; }
+.details-update-description { border: 2px solid #5D7FC0; border-radius: 10px; width: 85%; padding: 5px; vertical-align: middle; }
+.textbox { border: 2px solid #5D7FC0; border-radius: 5px; padding: 2px 5px 2px 5px; vertical-align: middle; }
+.dropdown {border: 2px solid #5D7FC0; border-radius: 5px; padding: 2px 5px 2px 5px; vertical-align: middle; }
+
+/* Details Page - Defects Tab*/
+td.DefectTicketColumn { font-size: 16px; font-weight: bold; text-align: center; }
+td.DefectTicketColumn a:link { color: #5D7FC0; }
+td.DefectTicketColumn a:visited { color: #5D7FC0; }
+td.DefectTicketColumn a:hover { color: #5D7FC0; }
+td.DefectTicketColumn a:active { color: #5D7FC0; }
+td.DefectTicketColumn a:focus { color: #5D7FC0; }
+td.DefectTicketColumn, td.StatusColumn, td.TestDateColumn, td.EnvironmentColumn, td.BrowserColumn, td.EditButtonColumn { text-align: center; }
+
+/* Test Cases Page*/
+.Inactive { color: #999999; }
+.NeedsAttention { color: #FF0000 !important; }
+
+/**********************
+     RIGHT COLUMN 
+**********************/
+/* Test Case List Chart */
+#RightColumnContent_BarChart1__ParentDiv, div.ChartTotalPassed, div.TotalTestCases {border: 2px solid #5D7FC0; border-radius: 10px; }
+#RightColumnContent_BarChart1__ParentDiv {padding:10px !important;}
+#ChartBackGround { text-align:center !important; border: 2px solid #5D7FC0 !important; border-radius: 10px !important;}
+#ChartTitle { color: #000000 !important; fill: #000000 !important; padding-top: 10px; padding-bottom: 10px !important; }
+#Bar1, #Bar2, #Bar3, #Bar4, #Bar5, #Bar6, #Bar7, #Bar8 {stroke: #5D7FC0 !important;}
+#ChartInfo { width: 100%; }
+.ChartTotalPassed { border: 1px solid #5D7FC0; text-align: center; }
+.ChartTotalPassed td { padding-right: 3px; padding-left: 3px; }
+.ChartTotalPassedPercent { font-size: 24px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: #5D7FC0; }
+.ChartTotalPassedWords { font-size: 12px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: #999999; }
+.TotalTestCases { border: 1px solid #5D7FC0; text-align: center; }
+#TestCaseInfo { width: 100%; }
+#TestCaseInfo td { padding-right: 3px; padding-left: 3px; }
+.TestCaseTotalsWords { font-size: 12px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: #999999; }
+.TestCaseTotalsNumbers { width: 100%; text-align: right; font-size: 24px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: #5D7FC0; }
+#right div.title { padding: 2px 1px; color: #404040; font-size: small; width: 100%; text-align: center; margin: 5px 0px 5px 0px; text-align: left; }
+
+/* Profile Page*/
+#AddButton { text-align:center;}
+
+
+/* DASHBOARD
+----------------------------------------------------------*/
+#center .dashboardtitle { border: 1px solid #000000; padding: 4px 2px; color: #FFFFFF; font-size: 14px; font-weight: bold; font-variant: small-caps; text-align: left; background-color: #404040; border-radius: 10px;}
+#center td .dashboardPanel { font-size: 12px; height: 200px; }
+.dashboardRightPanel legend { color: #5D7FC0; font-size: 12px; }
+#center .ChartTestCaseStatusCount { text-align: center; }
+.multicolumnTestCaseList a:link { color: #404040; font-size: 10px; font-weight: bold; }
+.multicolumnTestCaseList a:visited { color: #404040; font-size: 10px; font-weight: bold; }
+
+/* DASHBOARD - TEST RESULT METRICS
+----------------------------------------------------------*/
+.CurrentStatusTable { font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; width: 100%; }
+.CurrentStatusTable td, .CurrentStatusTable th { padding: 0px 3px; }
+.CurrentStatusTable thead th:first-child { border: none; }
+.CurrentStatusTable tbody td { color: #0D3A06; /*border-left: solid 1px #525252;*/ font-size: 12px; font-weight: normal; text-align: center; }
+.CurrentStatusTable tbody td:first-child { border-left: none; }
+.CurrentStatusTable tbody tr:last-child td { border-bottom: none; }
+.CurrentStatusTable .Pass { background-color: #BFFFBF; }
+.CurrentStatusTable .Fail { background-color: #FFBFBF; }
+.CurrentStatusTable .Other { background-color: #C0C0C0; }
+.CurrentStatusTable .Total { background-color: #666666; color: #FFFFFF; }
+.CurrentStatusTable .StatusLabel { background-color: #CCCCCC; font-weight: bold; font-size: small; color: #000000; width: 10%; }
+
+#MainContent_TestResultMetrics_Header td { background-image: url('../Images/dropdown-bg.gif'); color: #FFFFFF; font-weight: bold; }
+#MainContent_TestResultMetrics_Totals td { background-color: #404040; color: #FFFFFF; }
+
+/* DASHBOARD - AUTOMATION METRICS
+----------------------------------------------------------*/
+.FilterWarning { font-size: 12px; color: #FF0000; background-color: #FFFFFF; }
+
+.AutomationMetricsTitle { }
+
+.AutomatedContainerTable { width: 100%; }
+
+.AutomationMetricsLeft, .AutomationMetricsRight { border: thin solid #000000; font-size: 12px; background-color: #FFFFFF; top: 2px; width: 100%; }
+
+.AutomatedTableCellLeft { vertical-align: top; width: 50%; }
+
+.AutomatedTableCellRight { float: right; width: 100%; }
+
+.AutomationMetricsLeft .Automated_Numerics { background-color: #F4E2AA; color: #000000; }
+
+.AutomationMetricsLeft, .AutomationMetricsRight { }
+
+.AutomationMetricsLeft .Automated_Numerics td, .AutomationMetricsLeft .Automated_Totals td, .AutomationMetricsLeft .Automated_Totals2 td,
+.AutomationMetricsRight .Automated_Percentages1 td, .AutomationMetricsRight .Automated_Percentages2 td, .AutomationMetricsRight .Automated_Percentages3 td { padding: 3px 12px; }
+
+.AutomationMetricsLeft .Automated_Totals { background-color: #A1B7CB; color: #000000; }
+
+.AutomationMetricsLeft .Automated_Totals2 { background-color: #516271; color: #FFFFFF; font-weight: bold; font-size: 14px; }
+
+.AutomationMetricsRight .Automated_Percentages1 { background-color: #AAA9D1; color: #000000; }
+
+.AutomationMetricsRight .Automated_Percentages2 { background-color: #6C6AA3; color: #FFFFFF; font-weight: bold; font-size: 14px; }
+
+/* STATUSES
+----------------------------------------------------------*/
+
+/* Test Result Statuses*/
+#center .statusPass { background-position: center; vertical-align: middle; background-image: url('../Images/PassButton.png'); background-size: 20px 20px; background-repeat: no-repeat; width: 40px; }
+#center .statusFail { background-position: center; text-align: center; font-weight: bold; color: #FF3300; vertical-align: middle; background-position: center; background-image: url('../Images/FailButton.png'); background-size: 20px 20px; background-repeat: no-repeat; width: 40px; }
+#center .statusNotStarted { text-align: center; color: #000000; vertical-align: middle; background-position: center; background-image: url('../Images/NotStartedButton.png'); background-size: 20px 20px; background-repeat: no-repeat; width: 40px; }
+#center .statusInProgress { text-align: center; color: #9933FF; vertical-align: middle; background-position: center; background-image: url('../Images/InProgressButton.png'); background-size: 20px 20px; background-repeat: no-repeat; width: 40px; }
+#center .statusInQueue { text-align: center; color: #6600CC; vertical-align: middle; background-position: center; background-image: url('../Images/InQueueButton.png'); background-size: 20px 20px; background-repeat: no-repeat; width: 40px; }
+#center .statusRetest { text-align: center; color: #FF9900; vertical-align: middle; font-weight: bold; background-position: center; background-image: url('../Images/RetestButton.png'); background-size: 20px 20px; background-repeat: no-repeat; width: 40px; }
+
+
+
+
+/* Details Page - Tabs*/
+.lblTCID { float: left; font-size: 24px; font-weight: bold; font-variant: small-caps; color: #5D7FC0; font-family: Arial, Helvetica, sans-serif; }
+
+.ajax__tab_blueGrad-theme .ajax__tab_header { font-family: arial,helvetica,clean,sans-serif; font-size: small; color: #ffffff; border-bottom: solid 5px #5D7FC0; border-bottom-color: #5D7FC0; }
+.ajax__tab_blueGrad-theme .ajax__tab_header .ajax__tab_outer { background: repeat-x; margin: 0px 0.16em 0px 0px; padding: 1px 0px 1px 0px; vertical-align: top; border: solid 1px #5D7FC0; border-bottom-width: 0px; background-color: #D5E1F0; }
+.ajax__tab_blueGrad-theme .ajax__tab_header .ajax__tab_tab { color: #666666; padding: 0.35em 0.75em; margin-right: 0.01em; }
+.ajax__tab_blueGrad-theme .ajax__tab_hover .ajax__tab_outer { background: #5D7FC0 repeat-x left -1300px; color: #666666; }
+.ajax__tab_blueGrad-theme .ajax__tab_active .ajax__tab_tab { color: #fff; font-weight: bold; font-size: 14px; background-image: url('../Images/PaginationBG.png');}
+.ajax__tab_blueGrad-theme .ajax__tab_active .ajax__tab_outer { background: #5D7FC0 repeat-x left -1400px; }
+.ajax__tab_blueGrad-theme .ajax__tab_body { font-family: verdana,tahoma,helvetica; font-size: 10pt; padding: 0.25em 0.5em; background-color: #FFFFFF; border: solid 1px #808080; border-top-width: 0px; }
+
+/*  All Gridviews*/
+.gvGlobalGridview { width: 100%; background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse: collapse; }
+
+/* All sortable headers*/
+.gvGlobalGridview th a:link { color: #FFFFFF; }
+.gvGlobalGridview th a:visited { color: #FFFFFF; }
+.gvGlobalGridview th a:hover { color: #FFFFFF; }
+.gvGlobalGridview th a:active { color: #FFFFFF; }
+.gvGlobalGridview th a:focus { color: #FFFFFF; }
+
+/* Links within datagrid */
+/*.gvGlobalGridview a:link { color: #717171; }
+.gvGlobalGridview a:visited { color: #717171; }
+.gvGlobalGridview a:hover { color: #717171; }
+.gvGlobalGridview a:active { color: #717171; }
+.gvGlobalGridview a:focus { color: #717171; }*/
+.gvGlobalGridview td { padding: 2px; /*color: #717171;*/ text-align: left; vertical-align: middle; font-size: 11px; border-top-style: solid; border-bottom-style: solid; border-top-width: 1px; border-bottom-width: 1px; border-top-color: #808080; border-bottom-color: #808080; }
+
+/* Button Headers*/
+.gvGlobalGridview th { padding: 4px 2px; color: #FFFFFF; background: #404040 url('../Images/grd_head.png') repeat-x top; border-left: solid 1px #525252; font-size: 10px; text-align: center; }
+.gvGlobalGridview th a { color: #FFFFFF; font-size: 10px; text-align: center; text-decoration: underline; }
+.gvGlobalGridview th h1 { padding: 4px 2px; color: #fff; background: #404040 url('../Images/grd_head.png') repeat-x top; border-left: solid 1px #525252; font-size: large; font-weight: bold; font-variant: small-caps; }
+
+/* Alternating Rows*/
+.gvGlobalGridview .alt { background: #D5E1F0; }
+
+/* Pager */
+.gvGlobalGridview .pgr { background-image: url('../Images/PaginationBG.png'); background-repeat: repeat-x; }
+.gvGlobalGridview .pgr table { margin: 5px 0; }
+.gvGlobalGridview .pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #C0C0C0; font-weight: bold; color: #fff; line-height: 12px; }
+.gvGlobalGridview .pgr a { color: #C0C0C0; text-decoration: none; }
+.gvGlobalGridview .pgr a:hover { color: #CCCCCC; text-decoration: none; }
+
+/* Caption */
+.gvGlobalGridview caption { border: 1px solid #5C443A; /*padding:6px 4px 8px 0px;*/ text-align: left; font-variant: small-caps; text-transform: none; font-size: 12px; font-weight: 200; background-color: #828282; color: #FFFFFF; }
+
+/* Gridview Footer */
+.gvGlobalGridview .FooterStyle { background-color: #828282; color: #FFFFFF; text-align: right; }
+
+/* Center Align Text of Columns*/
+.gvGlobalGridview .IdColumn, .gvGlobalGridview .ProjectColumn, .gvGlobalGridview .DetailButtonColumn, .gvGlobalGridview .LastTestDateColumn, .gvGlobalGridview .LastTestedByColumn, .gvGlobalGridview .AverageTimeColumn, .gvGlobalGridview .CheckAllColumn { text-align: center; }
+.gvGlobalGridview .DescriptionColumn { padding-left: 10px; }
+
+
+/**********************
+     RIGHT COLUMN 
+**********************/
+
+/**********************
+       FOOTER
+**********************/
+#Footer { text-align: center; color: #FFFFFF; font-size: 12px; }
+
+/**********************
+        ADMIN
+**********************/
+
+.fileUploadCell {vertical-align: top; }
+.failureNotification { font-size: 8pt; color: Red; vertical-align: top; text-align: left; }
+
+
+/**********************
+    MISCELLANEOUS
+**********************/
+
+/* Filter Drop-down Boxes */
+.subcontent-unit-border-blue { width: 230px; margin: 0 0 0 0; padding: 0 0 0 0; border: solid 1px #5D7FC0; background-color: #D5E1F0; }
+
+.subcontent-unit-noborder-blue { width: 230px; margin: 0 0 2.5em 0; padding: 0 0 10px 0; background-color: #D5E1F0; }
+
+.round-border-topleft { width: 10px; height: 10px; position: absolute; z-index: 100; background: url(../img/bg_corner_topleft.gif) no-repeat; margin-top: -1px; margin-left: -1px; }
+
+.round-border-topright { width: 10px; height: 10px; position: absolute; z-index: 100; background: url(../img/bg_corner_topright.gif) no-repeat; margin-top: -1px; margin-left: 174px; }
+
+.round-noborder-topleft { width: 10px; height: 10px; position: absolute; z-index: 100; background: url(../img/bg_corner_topleft.gif) no-repeat; margin-top: 0px; margin-left: 0px; }
+
+.round-noborder-topright { width: 10px; height: 10px; position: absolute; z-index: 100; background: url(../img/bg_corner_topright.gif) no-repeat; margin-top: 0px; margin-left: 175px; }
+
+.main-subcontent { padding: 0 0 0 0; display: inline /*Fix IE floating margin bug*/; width: 100%; margin: 0 0 0 0; overflow: visible !important /*Firefox*/; overflow: hidden /*IE6*/; }
+
+.main-subcontent h1.blue { clear: both; margin: 0 0 0 0; padding: 0px 5px 0px 5px; background-color: #5D7FC0; font-family: "trebuchet ms",verdana,arial,sans-serif; color: rgb(255,255,255); font-size: 16px; text-shadow: 2px 2px #717171; }
+
+.blocktext { clear: both; margin: 0 0 0 0; padding: 0px 5px 0px 5px; font-family: "trebuchet ms",verdana,arial,sans-serif; font-size: 12px; }
+
+.main-subcontent h3 { clear: both; float:right; margin: 1.0em 10px 0.5em 10px; color: rgb(80,80,80); font-weight: bold; font-size: 110%; }
+
+.main-subcontent p { clear: both; margin: 5px 5px 5px 5px; color: rgb(80,80,80); line-height: 1.3em; font-size: 110%; }
+
+.main-subcontent p.center { text-align: center; }
+
+.main-subcontent p.right { text-align: right; }
+
+.main-subcontent div { clear: both; margin: 5px 2px 5px 2px; line-height: 1.3em; font-size: 110%; }
+
+.main-subcontent div.listBoxHeader
+{
+    text-shadow: 2px 2px #717171;
+    background-color: #5D7FC0;
+    font-family: "trebuchet ms",verdana,arial,sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    text-shadow: #717171;
+}
+
+
+.main-subcontent div.center { text-align: center; }
+
+.main-subcontent div.right { text-align: right; }
+
+.main-subcontent ul { list-style: none; margin: 0.5em 10px 1.0em 10px; }
+
+.main-subcontent ul li { margin: 5px 0 0.2em 2px; padding: 0 0 0 11px; background: url(../img/bg_bullet_full_1.gif) no-repeat 0 0.4em; line-height: 1.2em; font-size: 110%; }
+
+.main-subcontent ol { margin: 0.5em 10px 1.0em 30px !important /*Non-IE6*/; margin: 0.5em 10px 1.0em 35px /*IE6*/; }
+
+.main-subcontent ol li { list-style-position: outside; margin: 0 0 0.4em 0; font-size: 110%; }
+
+.subcontent-unit-border:after, .subcontent-unit-noborder:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.subcontent-unit-border-blue:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.subcontent-unit-noborder-blue:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.main-subcontent div.message { font-size: 10px; }
+
+.details-subcontent { padding: 0 2px 0 2px; display: inline /*Fix IE floating margin bug*/; width: 100%; margin: 0 0 0 0; overflow: visible !important /*Firefox*/; overflow: hidden /*IE6*/; }
+
+.CTDetailsBoxText a:visited, .CTDetailsBoxText a { font-size: 14px; color: #404040; font-weight: bold; text-decoration: none; font-variant: small-caps; }
+
+.CTDetailsBoxText { font-size: 10px; color: #404040; }
+
+.ProfileCTDetailsBoxText a:visited, .ProfileCTDetailsBoxText a {font-size: 14px; color: #404040; font-weight: bold; text-decoration: none; font-variant: small-caps; }
+.ProfileCTDetailsBoxText { font-size: 10px; color: #404040; padding:3px 10px 3px 10px;}
+
+/* Form Elements */
+fieldset { margin: 1em 0px; padding: 1em; border: 1px solid #ccc; }
+
+fieldset legend { color: #5D7FC0; }
+
+fieldset p { margin: 2px 12px 10px 10px; }
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label { display: block; }
+
+
+fieldset label.inline { display: inline; }
+
+legend { font-size: 1.1em; font-weight: 600; padding: 2px 4px 8px 4px; }
+
+input.textEntry { width: 200px; border: 1px solid #ccc; }
+
+input.passwordEntry { width: 200px; border: 1px solid #ccc; }
+
+div.accountInfo { width: 42%; }
+
+/* Failures */
+.failureNotification { font-size: 8pt; color: Red; }
+
+
+
+
+/***************/
+/* UNORGANIZED */
+/***************/
+
+
+
+/* IMAGE BUTTON MENU
+----------------------------------------------------------*/
+.imgButtonMenu { display: block; text-align: right; padding: 0px; }
+
+/* TEST CASE LISTS
+----------------------------------------------------------*/
+.testCaseListIcons { width: 100%; }
+
+.NoDataSidebar {text-align: center; color: #808080; font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-variant: small-caps;}
+
+.NoData { text-align: center; color: #FF0000; font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-variant: small-caps; }
+
+.NoDataGood { text-align: center; color: #808080; font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-variant: small-caps; }
+
+/* ADMIN
+----------------------------------------------------------*/
+div.adminSectionHeader { font-variant: normal; font-size: 12px; color: #404040; }
+
+#left div.adminMenu { width: 100%; height: 100%; /* background: #808080; */ padding: 2px 4px; }
+
+#left div.adminMenu a { color: #404040; font-size: medium; text-align: center; margin: 5px 0px 5px 0px; text-align: left; }
+
+#right div.adminMenu { width: 100%; height: 100%; /* background: #808080; */ padding: 2px 4px; }
+
+div#RightColumnContent_pnlRightColumn a { color: #404040; font-size: 14px; text-align: center; margin: 5px 0px 5px 0px; text-align: left; }
+
+#center .detailtitle { border: thin solid #828282; width: 100px; font-size: small; text-align: center; font-variant: small-caps; background-color: #828282; color: #404040; }
+
+/* TEST CASE KEYWORD SEARCH
+----------------------------------------------------------*/
+.txtSearch { padding: 2px 2px; width: 175px; color: #9f9f9f; font-size: 10px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; background: #FFFFFF; }
+
+.btnSearch { width: 20px; height: 20px; font-size: 10px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-weight: bold; padding-bottom: 0px; }
+
+#keywordSearch { margin: 0; padding: 0; }
+
+#keywordSearch { display: inline-block; border: 1px solid #D9DADB; height: 22px; overflow: hidden; }
+
+/* Test Case Statuses Deprecated*/
+#center .statusTestCaseNeedsUpdated { text-align: center; color: #0000FF; vertical-align: middle; background-position: center; background-image: url('../Images/NeedsUpdated.png'); background-size: 20px 20px; background-repeat: no-repeat; width: 40px; }
+#center .statusAutomatedTestNeedsUpdated { text-align: center; color: #0000FF; vertical-align: middle; background-position: center; background-image: url('../Images/NeedsUpdated.png'); background-size: 20px 20px; background-repeat: no-repeat; width: 40px; }
+#center .statusInactive { text-align: center; color: #999999; vertical-align: middle; background-position: center; background-image: url('../Images/NotUsed.png'); background-size: 20px 20px; background-repeat: no-repeat; width: 40px; }
+
+/* Profile Page - Passing Within Last 7 Days*/
+#center .testSpanRow { background-color: #CCFFCC; }
+
+/* MISC
+----------------------------------------------------------*/
+.calendarButton { /*padding-top: 5px;*/ }
+
+.comingSoon { padding: 10px; vertical-align: middle; text-align: center; height: 300px; }
+
+.Error { color: #FF0000; font-weight: bold; font-size: 12px; text-align: center; }
+
+#Error { color: #FF0000; font-weight: bold; font-size: 12px; /*text-align: center;*/ }
+
+
+.updateTextbox { background-color: #FFFFFF; }
+
+.subscript { font-size: 10px; color: #FF0000; }
+
+.TestCaseScreenshotCaption { font-size: 12px; font-weight: bold; }
+
+.footer { clear: both; position: relative; text-align: center; color: #FFFFFF; background: #0D3A06; padding: 10px 20px 10px 20px; font-size: 14px; }
+
+
+/* PROFILE PERSONAL DATA FORMVIEW
+----------------------------------------------------------*/
+.fvProfileData { background-color: #fff; margin: 5px 0 10px 0; width: 100%; }
+
+.fvProfileData table { border-style: none; }
+
+.fvProfileData td { padding: 2px; color: #717171; text-align: left; vertical-align: middle; font-size: 12px; border-style: none; }
+
+
+/* Button Headers on TestCases.aspx*/
+/* All Field Headers on Test Case Detail*/
+.fvProfileData th { border-style: none; padding: 2px 10px 2px 2px; color: #717171; font-size: 12px; text-align: left; width: 200px; }
+
+.fvProfileData .ibtnEditProfile { vertical-align: top; text-align: right; }
+
+
+#MainContent_fvTestCaseDetails_lblItemDescription { font-weight: bold; color: #003399; font-size: 12px; }
+
+#MainContent_fvTestCaseDetails_lblItemTestCaseSteps { color: #666666; font-size: 12px; }
+
+#MainContent_fvTestCaseDetails_lblItemExpectedResults { color: #666666; font-size: 12px; }
+
+#MainContent_fvTestCaseDetails_lblItemTestCaseNotes { color: #666666; font-size: 12px; }
+
+
+
+
+.ServerListTable { background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse: collapse; }
+
+.TableHeader { padding: 4px 2px; color: #fff; background: #404040 url('../Images/grd_head.png') repeat-x top; border-left: solid 1px #525252; font-size: Small; }
+
+.dashboardPanelWarning legend { color: #FF0000; }
+
+

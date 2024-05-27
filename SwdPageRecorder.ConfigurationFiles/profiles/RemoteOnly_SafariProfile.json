@@ -1,0 +1,17 @@
+﻿{
+  "profile": {
+    "profileId": "Safari",
+    "displayName": "Safari",
+    "displayPriority": 10,
+    "canUseWithLocalWebdriver": false,
+    "canUseWithIWebDriver": true
+  },
+  "activation": {
+    "browserName": "Safari"
+  },
+  "capabilities": {
+    "IWebDriver": [
+      // [ "capName", "capValue" ]
+    ]
+  }
+}

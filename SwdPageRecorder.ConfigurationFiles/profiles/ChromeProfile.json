@@ -1,0 +1,18 @@
+﻿{
+  "profile": {
+    "profileId": "Chrome",
+    "displayName": "Chrome",
+    "displayPriority": 0,
+    "canUseWithLocalWebdriver": true,
+    "canUseWithIWebDriver": true
+  },
+  "activation": {
+    "browserName": "Chrome"
+  },
+  "capabilities": {
+    "IWebDriver": [
+      // [ "capName", "capValue" ]
+
+    ]
+  }
+}
